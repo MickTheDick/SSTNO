@@ -1,7 +1,7 @@
 - type: species
   id: Reptilian
   name: species-name-reptilian
-  roundStart: true
+  roundStart: false # SSTNO: not offered in the character editor. Prototype kept.
   prototype: MobReptilian
   defaultSkinTone: "#34a223"
   dollPrototype: AppearanceReptilian

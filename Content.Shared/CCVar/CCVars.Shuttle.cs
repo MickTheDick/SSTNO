@@ -30,8 +30,8 @@ public sealed partial class CCVars
     /// <summary>
     ///     Whether the arrivals shuttle is enabled.
     /// </summary>
-    public static readonly CVarDef<bool> ArrivalsShuttles =
-        CVarDef.Create("shuttle.arrivals", true);
+    public static readonly CVarDef<bool>         ArrivalsShuttles =
+        CVarDef.Create("shuttle.arrivals", false);
 
     /// <summary>
     ///     The map to use for the arrivals station.
@@ -67,8 +67,8 @@ public sealed partial class CCVars
     /// <summary>
     ///     Whether to automatically spawn escape shuttles.
     /// </summary>
-    public static readonly CVarDef<bool> GridFill =
-        CVarDef.Create("shuttle.grid_fill", true, CVar.SERVERONLY);
+    public static readonly CVarDef<bool>         GridFill =
+        CVarDef.Create("shuttle.grid_fill", false, CVar.SERVERONLY);
 
     /// <summary>
     ///     Whether to automatically preloading grids by GridPreloaderSystem
@@ -167,8 +167,8 @@ public sealed partial class CCVars
     /// <summary>
     ///     Whether the emergency shuttle is enabled or should the round just end.
     /// </summary>
-    public static readonly CVarDef<bool> EmergencyShuttleEnabled =
-        CVarDef.Create("shuttle.emergency", true, CVar.SERVERONLY);
+    public static readonly CVarDef<bool>         EmergencyShuttleEnabled =
+        CVarDef.Create("shuttle.emergency", false, CVar.SERVERONLY);
 
     /// <summary>
     ///     The percentage of time passed from the initial call to when the shuttle can no longer be recalled.
@@ -182,7 +182,7 @@ public sealed partial class CCVars
     /// </summary>
     [CVarControl(AdminFlags.Server | AdminFlags.Mapping, min: 0, max: int.MaxValue)]
     public static readonly CVarDef<int> EmergencyShuttleAutoCallTime =
-        CVarDef.Create("shuttle.auto_call_time", 90, CVar.SERVERONLY);
+        CVarDef.Create("shuttle.auto_call_time", 0, CVar.SERVERONLY);
 
     /// <summary>
     ///     Time in minutes after the round was extended (by recalling the shuttle) to call

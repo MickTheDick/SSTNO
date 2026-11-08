@@ -55,7 +55,7 @@ public sealed partial class CCVars
     ///     Controls the default game preset.
     /// </summary>
     public static readonly CVarDef<string>
-        GameLobbyDefaultPreset = CVarDef.Create("game.defaultpreset", "secret", CVar.ARCHIVE);
+        GameLobbyDefaultPreset = CVarDef.Create("game.defaultpreset", "SSTNO", CVar.ARCHIVE);
 
     /// <summary>
     ///     Controls if the game can force a different preset if the current preset's criteria are not met.
@@ -67,7 +67,7 @@ public sealed partial class CCVars
     ///     The preset for the game to fall back to if the selected preset could not be used, and fallback is enabled.
     /// </summary>
     public static readonly CVarDef<string>
-        GameLobbyFallbackPreset = CVarDef.Create("game.fallbackpreset", "Traitor,Extended", CVar.ARCHIVE);
+        GameLobbyFallbackPreset = CVarDef.Create("game.fallbackpreset", "SSTNO", CVar.ARCHIVE);
 
     /// <summary>
     ///     The preset for the game to fall back to if the selected preset could not be used, and fallback is enabled.
@@ -97,7 +97,7 @@ public sealed partial class CCVars
     ///     Controls the game map prototype to load. SS14 stores these prototypes in Prototypes/Maps.
     /// </summary>
     public static readonly CVarDef<string>
-        GameMap = CVarDef.Create("game.map", string.Empty, CVar.SERVERONLY);
+        GameMap = CVarDef.Create("game.map", "SSTNODev", CVar.SERVERONLY);
 
     /// <summary>
     ///     Controls whether to use world persistence or not.
@@ -116,7 +116,7 @@ public sealed partial class CCVars
     ///     Prototype to use for map pool.
     /// </summary>
     public static readonly CVarDef<string>
-        GameMapPool = CVarDef.Create("game.map_pool", "DefaultMapPool", CVar.SERVERONLY);
+        GameMapPool = CVarDef.Create("game.map_pool", "SSTNOMapPool", CVar.SERVERONLY);
 
     /// <summary>
     ///     The depth of the queue used to calculate which map is next in rotation.
@@ -464,7 +464,7 @@ public sealed partial class CCVars
     /// Spaces between entries can be either used or omitted.
     /// </remarks>
     public static readonly CVarDef<string> NewCharacterJobs =
-        CVarDef.Create("game.new_character_jobs", "Passenger", CVar.REPLICATED);
+        CVarDef.Create("game.new_character_jobs", "SSTNOCivilian", CVar.REPLICATED);
 
     /// <summary>
     /// If true, shows a new player indicator over the heads of newly joined players.

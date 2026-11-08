@@ -1,0 +1,9 @@
+sstno-preset-title = SSTNO
+sstno-preset-description = Human survival on a small outdoor developer test area. No station shift, no emergency shuttle, and no antagonist selection.
+sstno-round-end-text = SSTNO developer round. No station shift ran, no emergency shuttle was called, and no antagonist was selected. This was not a finished region.
+sstno-job-civilian-name = Civilian
+sstno-job-civilian-description = A person on the developer test area. You are not station crew.
+sstno-job-civilian-supervisors = Nobody. This is a developer test, not a chain of command.
+sstno-department-name = SSTNO
+sstno-department-description = The only role offered by the SSTNO developer baseline.
+sstno-developer-test-note = SSTNO developer test area. This is a small fictional patch of ground used to prove the fork starts without a space station. It is not the regional map and it is not a finished settlement. Made by MickTheDick.

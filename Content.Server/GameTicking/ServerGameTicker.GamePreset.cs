@@ -101,7 +101,9 @@ public sealed partial class ServerGameTicker
 
     private void InitializeGamePreset()
     {
-        SetGamePreset(LobbyEnabled ? Cfg.GetCVar(CCVars.GameLobbyDefaultPreset) : "sandbox");
+        // SSTNO uses the configured default preset even when the lobby is disabled.
+        // Upstream forced "sandbox" in that case, which is an admin spawn mode.
+        SetGamePreset(Cfg.GetCVar(CCVars.GameLobbyDefaultPreset));
     }
 
     public void SetGamePreset(GamePresetPrototype? preset, bool force = false, GamePresetPrototype? decoy = null, int? resetDelay = null)

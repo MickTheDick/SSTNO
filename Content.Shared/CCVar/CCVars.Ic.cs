@@ -63,7 +63,7 @@ public sealed partial class CCVars
     ///     If blank, will use a round start species picked at random.
     /// </summary>
     public static readonly CVarDef<string> ICRandomSpeciesWeights =
-        CVarDef.Create("ic.random_species_weights", "SpeciesWeights", CVar.SERVER);
+        CVarDef.Create("ic.random_species_weights", "SSTNOSpeciesWeights", CVar.SERVER);
 
     /// <summary>
     ///     The list of species that will NOT be given to new account joins when they are assigned a random character.

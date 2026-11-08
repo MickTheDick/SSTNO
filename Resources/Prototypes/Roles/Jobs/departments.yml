@@ -3,6 +3,7 @@
   name: department-Cargo
   description: department-Cargo-description
   color: "#A46106"
+  editorHidden: true # SSTNO: station department kept, hidden from the character editor.
   roles:
   - CargoTechnician
   - Quartermaster
@@ -25,6 +26,7 @@
   color: "#7F7F7F"
   weight: -10 # Lowest weight of all "regular" crew departments
   ignoreForDepartmentFallback: true
+  editorHidden: true # SSTNO: station department kept, hidden from the character editor.
   roles:
   - Passenger
   - Visitor
@@ -36,6 +38,7 @@
   color: "#334E6D"
   weight: 100 # Highest weight of all "regular" crew departments
   primary: false
+  editorHidden: true # SSTNO: station department kept, hidden from the character editor.
   roles:
   - Captain
   - ChiefEngineer
@@ -50,6 +53,7 @@
   name: department-Engineering
   description: department-Engineering-description
   color: "#EFB341"
+  editorHidden: true # SSTNO: station department kept, hidden from the character editor.
   roles:
   - AtmosphericTechnician
   - ChiefEngineer
@@ -61,6 +65,7 @@
   name: department-Medical
   description: department-Medical-description
   color: "#52B4E9"
+  editorHidden: true # SSTNO: station department kept, hidden from the character editor.
   roles:
   - Chemist
   - ChiefMedicalOfficer
@@ -74,6 +79,7 @@
   name: department-Science
   description: department-Science-description
   color: "#D381C9"
+  editorHidden: true # SSTNO: station department kept, hidden from the character editor.
   roles:
   - ResearchDirector
   - Scientist
@@ -85,6 +91,7 @@
   description: department-Security-description
   color: "#DE3A3A"
   weight: 20 # Raised priority compared to most other crew departments
+  editorHidden: true # SSTNO: station department kept, hidden from the character editor.
   roles:
   - HeadOfSecurity
   - SecurityCadet
@@ -97,6 +104,7 @@
   name: department-Service
   description: department-Service-description
   color: "#9FED58"
+  editorHidden: true # SSTNO: station department kept, hidden from the character editor.
   roles:
   - Bartender
   - Botanist
@@ -119,6 +127,7 @@
   description: department-Silicon-description
   color: "#D381C9"
   weight: -20 # Displays after all regular crew departments, including Civilian, both because they're mechanically distinct and because they're subordinate to all crew by default
+  editorHidden: true # SSTNO: station department kept, hidden from the character editor.
   roles:
   - Borg
   - StationAi
@@ -147,6 +156,7 @@
   color: "#9FED58"
   weight: -100 # Displays after all other departments, since that makes them obviously distinct in the lobby's jobs list
   ignoreForDepartmentFallback: true
+  editorHidden: true # SSTNO: station department kept, hidden from the character editor.
   roles:
   - Reporter
   - Psychologist

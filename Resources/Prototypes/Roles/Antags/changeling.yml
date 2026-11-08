@@ -2,7 +2,7 @@
   id: Changeling
   name: roles-antag-changeling-name
   antagonist: true
-  setPreference: true
+  setPreference: false # SSTNO: not offered in character preferences. Prototype kept.
   objective: roles-antag-changeling-objective
   guides: [ Changelings ]
   tags:

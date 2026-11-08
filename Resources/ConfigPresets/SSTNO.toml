@@ -1,0 +1,31 @@
+# SSTNO server preset. Load it with config.presets = "SSTNO".
+# Development builds also apply these choices from ConfigPresets/Build/development.toml.
+# This file does not describe a finished region.
+
+[game]
+hostname = "SSTNO"
+desc = "SSTNO developer baseline. Human survival on a small outdoor test area. Not a finished region."
+defaultpreset = "SSTNO"
+fallbackpreset = "SSTNO"
+map = "SSTNODev"
+map_pool = "SSTNOMapPool"
+map_rotation = false
+new_character_jobs = "SSTNOCivilian"
+role_timers = false
+role_loadout_timers = false
+
+[ic]
+random_species_weights = "SSTNOSpeciesWeights"
+
+[events]
+enabled = false
+
+[shuttle]
+grid_fill = false
+auto_call_time = 0
+emergency = false
+arrivals = false
+preload_grids = false
+
+[hub]
+advertise = false

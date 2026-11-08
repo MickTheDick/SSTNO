@@ -22,13 +22,20 @@ max_connections = 256
 
 [game]
 # Name of the server. This is what will be displayed in the server list and lobby.
-hostname = "MyServer"
+hostname = "SSTNO"
 # Description of the server. This is what will be displayed in the server list.
-desc = "Just another server, don't mind me!"
+desc = "SSTNO developer baseline. Human survival on a small outdoor test area. Not a finished region."
 # The maximum number of players that can connect to the server. (Exluding admins)
 soft_max_players = 30
 # Controls the lobby timer in seconds.
 lobbyduration = 150
+# SSTNO round. Station presets remain in the files for admin use and are not the default.
+defaultpreset = "SSTNO"
+fallbackpreset = "SSTNO"
+map = "SSTNODev"
+map_pool = "SSTNOMapPool"
+map_rotation = false
+new_character_jobs = "SSTNOCivilian"
 # Should roles be restricted based on time?
 role_timers = true
 # Check connecting player ip against the IPIntel API (aka stop VPN/Proxy connections). Useful for hosts.
@@ -42,6 +49,8 @@ ipintel_bad_rating = 0.95
 [ic]
 # Allows visibility and editing of flavor text (character descriptions)
 flavor_text = false
+# Human-only random characters. Other species prototypes stay in the files.
+random_species_weights = "SSTNOSpeciesWeights"
 
 [admin]
 # Should players be able to see their own notes?
@@ -58,14 +67,18 @@ admins_count_in_playercount = false
 id = "unknown_server_id"
 
 [events]
-# Controls if the game should run station events. (Meteors, Sleeper Syndicates, etc.)
-enabled = true
+# Station events stay in the files. SSTNO does not run them.
+enabled = false
 
 [shuttle]
 # Should the emergency shuttle be allowed to launch early by command staff?
 emergency_early_launch_allowed = false
 # Time in minutes after round start to auto-call the emergency shuttle. Set to zero to disable.
-auto_call_time = 90
+auto_call_time = 0
+# SSTNO does not run an emergency shuttle or arrivals shuttle.
+emergency = false
+arrivals = false
+grid_fill = false
 
 [console]
 # If this is true, people connecting from this computer will automatically be elevated to full admin privileges.
