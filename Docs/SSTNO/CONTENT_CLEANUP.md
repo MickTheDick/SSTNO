@@ -4,7 +4,7 @@ Made by MickTheDick.
 
 This is the first reversible cleanup of the MickTheDick/SSTNO fork. The fork started from space-wizards/space-station-14 `master`. Upstream license and copyright notices stay in place. Credit in this file does not replace them.
 
-No `LORE.md` was provided, so this pass does not invent factions, history, or a regional map. The only new place a player can start is a small outdoor developer test area.
+When this cleanup was written, no lore file had been provided, so the pass did not invent factions, history, or a regional map. A later draft, [`LORE.md`](../../LORE.md), proposes a setting. That draft is not implemented. The only playable SSTNO place is still the developer test pad described below.
 
 Upstream does not accept AI-generated contributions. Do not open an upstream pull request from this fork.
 
