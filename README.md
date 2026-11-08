@@ -1,5 +1,7 @@
 <div align="center">
 
+<a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2438003901"><img src="Docs/SSTNO/images/tno-workshop-thumbnail.png" alt="Steam Workshop thumbnail for The New Order: Last Days of Europe" width="280"/></a>
+
 # SSTNO
 
 *A grounded human fork of Space Station 14, still early and not for public play.*
@@ -58,7 +60,7 @@ A Tools build reads `Resources/ConfigPresets/Build/development.toml`, skips the 
 - Code license: [LICENSE.TXT](LICENSE.TXT) (MIT), Copyright (c) 2017-2026 Space Wizards Federation. Upstream: [space-wizards/space-station-14](https://github.com/space-wizards/space-station-14), engine [RobustToolbox](https://github.com/space-wizards/RobustToolbox).
 - Most upstream assets are [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless a file says otherwise. Some are [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) and are not cleared for commercial use. Example: [crowbar metadata](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json). Notes: [Robust Generic Attribution](https://docs.spacestation14.com/en/specifications/robust-generic-attribution.html), [Robust Station Image](https://docs.spacestation14.com/en/specifications/robust-station-image.html).
 - Upstream does not accept AI-generated contributions. Do not open a pull request or issue on `space-wizards/space-station-14` from this fork.
-- TNO artwork is not included; reuse permission has not been established. Workshop page for the mod that inspired the setting: [The New Order: Last Days of Europe](https://steamcommunity.com/sharedfiles/filedetails/?id=2438003901). SSTNO is not affiliated with or endorsed by that project, Paradox Interactive, or Hearts of Iron IV.
+- Header image: Steam Workshop thumbnail by the TNO development team, from [The New Order: Last Days of Europe](https://steamcommunity.com/sharedfiles/filedetails/?id=2438003901). SSTNO does not own it, and no reuse license has been established. It is separate from the MIT code license and the Creative Commons asset licenses above. SSTNO is not affiliated with or endorsed by that project, Paradox Interactive, or Hearts of Iron IV.
 
 <div align="center">
 
