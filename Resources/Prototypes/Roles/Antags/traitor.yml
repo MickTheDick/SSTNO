@@ -2,7 +2,7 @@
   id: Traitor
   name: roles-antag-syndicate-agent-name
   antagonist: true
-  setPreference: true
+  setPreference: false # SSTNO: not offered in character preferences. Prototype kept.
   objective: roles-antag-syndicate-agent-objective
   guides: [ Traitors ]
   tags:
@@ -32,7 +32,7 @@
   id: TraitorSleeper
   name: roles-antag-syndicate-agent-sleeper-name
   antagonist: true
-  setPreference: true
+  setPreference: false # SSTNO: not offered in character preferences. Prototype kept.
   objective: roles-antag-syndicate-agent-sleeper-objective
   guides: [ Traitors ]
   tags:

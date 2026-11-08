@@ -2,7 +2,7 @@
   id: HeadRev
   name: roles-antag-rev-head-name
   antagonist: true
-  setPreference: true
+  setPreference: false # SSTNO: not offered in character preferences. Prototype kept.
   objective: roles-antag-rev-head-objective
   guides: [ Revolutionaries ]
   tags:

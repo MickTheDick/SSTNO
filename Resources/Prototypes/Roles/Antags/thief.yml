@@ -2,7 +2,7 @@
   id: Thief
   name: roles-antag-thief-name
   antagonist: true
-  setPreference: true
+  setPreference: false # SSTNO: not offered in character preferences. Prototype kept.
   objective: roles-antag-thief-objective
   guides: [ Thieves ]
   tags:

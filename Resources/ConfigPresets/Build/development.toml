@@ -1,12 +1,16 @@
 ﻿[game]
 # Straight in-game baby
 lobbyenabled = false
-# Dev map for faster loading & convenience
-map = "Dev"
+# SSTNO developer test area. This is not a station and not a finished region.
+map = "SSTNODev"
+defaultpreset = "SSTNO"
+fallbackpreset = "SSTNO"
+map_pool = "SSTNOMapPool"
+map_rotation = false
 role_timers = false
 admin_job_tracking = true
 role_loadout_timers = false
-new_character_jobs = "Passenger, Captain"
+new_character_jobs = "SSTNOCivilian"
 
 [events]
 enabled = false
@@ -45,7 +49,7 @@ new_player_threshold = 120
 
 [ic]
 random_characters = true
-random_species_weights = ""
+random_species_weights = "SSTNOSpeciesWeights"
 ssd_sleep_time = 3600
 
 [database]

@@ -1,0 +1,109 @@
+# SSTNO playable entry. Isolated from upstream prototypes so a later merge can see the fork delta.
+# This is a developer baseline, not factions, lore, or the regional map.
+
+- type: gamePreset
+  id: SSTNO
+  alias:
+  - sstno
+  name: sstno-preset-title
+  description: sstno-preset-description
+  showInVote: true
+  rules:
+  - SSTNORound
+
+- type: entity
+  id: SSTNORound
+  parent: BaseSilentGameRule
+  categories: [ GameRules ]
+  components:
+  - type: SstnoRoundRule
+
+- type: gameMapPool
+  id: SSTNOMapPool
+  maps:
+  - SSTNODev
+
+- type: gameMap
+  id: SSTNODev
+  mapName: SSTNO Developer Test Area
+  mapPath: /Maps/_SSTNO/developer_test.yml
+  minPlayers: 0
+  maxRandomOffset: 0
+  randomRotation: false
+  stations:
+    SSTNODev:
+      stationProto: SSTNODeveloperStation
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: "SSTNO Developer Test Area"
+      - type: StationJobs
+        availableJobs:
+          SSTNOCivilian: [ -1, -1 ]
+
+- type: entity
+  id: SSTNODeveloperStation
+  parent:
+  - BaseStation
+  - BaseStationJobsSpawning
+  - BaseStationRecords
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Transform
+  - type: SstnoDeveloperTestArea
+
+- type: playTimeTracker
+  id: JobSSTNOCivilian
+
+- type: job
+  id: SSTNOCivilian
+  name: sstno-job-civilian-name
+  description: sstno-job-civilian-description
+  playTimeTracker: JobSSTNOCivilian
+  startingGear: SSTNOCivilianGear
+  icon: JobIconPassenger
+  supervisors: sstno-job-civilian-supervisors
+
+- type: startingGear
+  id: SSTNOCivilianGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitColorBrown
+    outerClothing: ClothingOuterCoatGentle
+    shoes: ClothingShoesColorBlack
+    back: ClothingBackpackDuffel
+  storage:
+    back:
+    - FoodBreadPlain
+    - FoodApple
+    - DrinkWaterBottleFull
+    - Crowbar
+    - Wrench
+    - Screwdriver
+    - Wirecutter
+    - Welder
+    - FlashlightLantern
+    - SurvivalKnife
+
+- type: department
+  id: SSTNO
+  name: sstno-department-name
+  description: sstno-department-description
+  color: "#6B8E23"
+  weight: 10
+  roles:
+  - SSTNOCivilian
+
+- type: weightedRandomSpecies
+  id: SSTNOSpeciesWeights
+  weights:
+    Human: 1
+
+- type: entity
+  id: SpawnPointSSTNOCivilian
+  parent: SpawnPointJobBase
+  name: SSTNO civilian spawn
+  components:
+  - type: Sprite
+    state: green
+  - type: SpawnPoint
+    spawn_type: Job
+    job_id: SSTNOCivilian

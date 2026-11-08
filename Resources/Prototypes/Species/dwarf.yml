@@ -1,7 +1,7 @@
 - type: species
   id: Dwarf
   name: species-name-dwarf
-  roundStart: true
+  roundStart: false # SSTNO: not offered in the character editor. Prototype kept.
   prototype: MobDwarf
   dollPrototype: AppearanceDwarf
   skinColoration: HumanToned

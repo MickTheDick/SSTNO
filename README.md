@@ -1,3 +1,11 @@
+# SSTNO
+
+This fork is a grounded human total-conversion baseline of Space Station 14, kept in MickTheDick/SSTNO. Made by MickTheDick.
+
+The default round is the SSTNO developer test area, not a space station. Read [Docs/SSTNO/CONTENT_CLEANUP.md](Docs/SSTNO/CONTENT_CLEANUP.md) before changing content.
+
+Upstream Space Station 14 does not accept AI-generated contributions. Do not open pull requests or issues against space-wizards/space-station-14 from this fork. The license and the upstream README below are unchanged.
+
 <div class="header" align="center">  
 <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg">  
 </div>

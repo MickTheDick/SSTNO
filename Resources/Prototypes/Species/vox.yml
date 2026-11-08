@@ -1,7 +1,7 @@
 - type: species
   id: Vox
   name: species-name-vox
-  roundStart: true
+  roundStart: false # SSTNO: not offered in the character editor. Prototype kept.
   prototype: MobVox
   dollPrototype: AppearanceVox
   skinColoration: VoxFeathers
