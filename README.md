@@ -1,76 +1,63 @@
 # SSTNO
 
-This fork is a grounded human total-conversion baseline of Space Station 14, kept in MickTheDick/SSTNO. Made by MickTheDick.
+**Proudly made by AI**
 
-The default round is the SSTNO developer test area, not a space station. Read [Docs/SSTNO/CONTENT_CLEANUP.md](Docs/SSTNO/CONTENT_CLEANUP.md) before changing content.
+**Made by MickTheDick**
 
-Upstream Space Station 14 does not accept AI-generated contributions. Do not open pull requests or issues against space-wizards/space-station-14 from this fork. The license and the upstream README below are unchanged.
+SSTNO is an unofficial, early-development total conversion of [Space Station 14](https://github.com/space-wizards/space-station-14). It is inspired by *The New Order: Last Days of Europe*, a Hearts of Iron IV mod. It is not an official TNO or HOI4 project, it is not finished, and it is not ready for public play.
 
-<div class="header" align="center">  
-<img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg">  
-</div>
+The intended setting is civilian survival and conflict among human factions in fictional West Russian borderlands around 1962. Separate faction bases, a civilian town, a secondary settlement, and contested supply routes are plans. They are not in the game.
 
-Space Station 14 is a remake of SS13 that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox), our homegrown engine written in C#.
+New SSTNO writing and the fork-specific setup were produced with AI assistance under MickTheDick's direction. That credit does not cover Space Station 14. The engine, gameplay code, and assets inherited from upstream were written by their original human authors and stay under their licenses.
 
-This is the primary repo for Space Station 14. To prevent people forking RobustToolbox, a "content" pack is loaded by the client and server. This content pack contains everything needed to play the game on one specific server.
+## What exists now
 
-If you want to host or create content for SS14, this is the repo you need. It contains both RobustToolbox and the content pack for development of new content packs.
+The playable SSTNO baseline is a developer test pad, not a region.
 
-## Links
+- Preset `SSTNO`, map `SSTNODev`, role Civilian, human characters only in the normal round.
+- A grass pad with air, gravity, a wooden shed, food, water, a medkit, and hand tools.
+- Station presets, non-human species, and antagonist preferences are hidden from the normal round. Those files were not deleted. Shared medical, construction, power, combat, and admin systems are still in the tree.
 
-<div class="header" align="center">  
+Start and cleanup notes: [Docs/SSTNO/CONTENT_CLEANUP.md](Docs/SSTNO/CONTENT_CLEANUP.md).
 
-[Website](https://spacestation14.com/) | [Discord](https://discord.ss14.io/) | [Forum](https://forum.spacestation14.com/) | [Mastodon](https://mastodon.gamedev.place/@spacestation14) | [Patreon](https://www.patreon.com/spacestation14) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Standalone Download](https://spacestation14.com/about/nightlies/)  
+## What is only a plan
 
-</div>
+[`LORE.md`](LORE.md) is a proposed setting draft. It is not verified TNO canon and it is not implemented.
 
-## Documentation/Wiki
+The draft imagines four human factions around a fictional Kama–Volga border: Vyatka monarchists, the Samara liberation army, Red partisans, and Tatar defenders, plus a neutral town, an outlying works, and the roads between them. None of those places or roles can be played yet. The only civilian role in the build is the developer-pad Civilian.
 
-Our [docs site](https://docs.spacestation14.com/) has documentation on SS14's content, engine, game design, and more.  
-Additionally, see these resources for license and attribution information:  
-- [Robust Generic Attribution](https://docs.spacestation14.com/en/specifications/robust-generic-attribution.html)  
-- [Robust Station Image](https://docs.spacestation14.com/en/specifications/robust-station-image.html)
+> "The Front has not fallen while one of us still fights."
+>
+> SSTNO fictional flavor, written for this fork as if spoken by a Red partisan in the Kama forests in 1962. It is not a historical quotation and it is not a line from TNO.
 
-We also have lots of resources for new contributors to the project.
+## Quick start
 
-## Contributing
+Pins: .NET SDK `10.0.100` (`global.json`, `rollForward` `latestFeature`) and RobustToolbox `v295.0.2` (`a112cb8368a718c8ef468fb9891349eec12cff4e`).
 
-We are happy to accept contributions from anybody. Get in Discord if you want to help. We've got a [list of issues](https://github.com/space-wizards/space-station-14-content/issues) that need to be done and anybody can pick them up. Don't be afraid to ask for help either!  
-Just make sure your changes and pull requests are in accordance with the [contribution guidelines](https://docs.spacestation14.com/en/general-development/codebase-info/pull-request-guidelines.html).
-
-We are not currently accepting translations of the game on our main repository. If you would like to translate the game into another language, consider creating a fork or contributing to a fork.
-
-## AI-generated contributions disclaimer
-This project does not accept low-effort or wholesale AI-generated contributions. Examples include, but are not limited to:
-
-- Any code (including yaml) generated by tools like GitHub Copilot, ChatGPT, or similar.
-- AI-created artwork, sound files, or other assets.
-- Auto-generated documentation, issue reports or pull request descriptions.
-
-Exceptions to this are simple tools like Rider's single-line completion feature.
-
-## Building
-
-1. Clone this repo:
 ```shell
-git clone https://github.com/space-wizards/space-station-14.git
+python3 RUN_THIS.py
+dotnet build Content.Server/Content.Server.csproj --nologo
+dotnet run --project Content.Server/Content.Server.csproj --no-build
 ```
-2. Go to the project folder and run `RUN_THIS.py` to initialize the submodules and load the engine:
-```shell
-cd space-station-14
-python RUN_THIS.py
-```
-3. Compile the solution:  
 
-Build the server using `dotnet build`.
+A Tools build loads `Resources/ConfigPresets/Build/development.toml`, skips the lobby, and starts `SSTNO` on `SSTNODev`. The client is `dotnet run --project Content.Client/Content.Client.csproj`. The server uses port 1212 from `Resources/ConfigPresets/server_config.toml` and is not advertised on the hub.
 
-[More detailed instructions on building the project.](https://docs.spacestation14.com/en/general-development/setup.html)
+## The New Order image
 
-## License
+No TNO image is embedded in this repository.
 
-All code for the content repository is licensed under the [MIT license](https://github.com/space-wizards/space-station-14/blob/master/LICENSE.TXT).  
+The TNO logo and other mod art are not free to copy. A Victoria 3 fan project states that the TNO team granted permission before that project used TNO art, which is evidence that permission is required. Attribution by itself is not permission, so the logo is not stored here. Official mod page: [The New Order: Last Days of Europe on Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=2438003901).
 
-Most assets are licensed under [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless stated otherwise. Assets have their license and copyright specified in the metadata file. For example, see the [metadata for a crowbar](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).  
+A fan flag-map, [File:TNOflagMap.webp](https://web.archive.org/web/20250529201633/https://commons.wikimedia.org/wiki/File:TNOflagMap.webp), was published by AvailableViking on Wikimedia Commons on 15 June 2023 as their own work under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The live Commons file now returns 404, and the archived image file could not be downloaded for this page. That map is also a world flag map, so it would show faction flags, including extremist insignia, as decoration. It is not used.
 
-> [!NOTE]
-> Some assets are licensed under the non-commercial [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) or similar non-commercial licenses and will need to be removed if you wish to use this project commercially.
+SSTNO does not claim ownership, a license, or official endorsement of any TNO art. Inherited Space Station 14 assets keep the upstream licenses below. Nothing in this README applies the MIT license to TNO material.
+
+## Credits and upstream license
+
+- Space Station 14 and Robust Toolbox: [space-wizards/space-station-14](https://github.com/space-wizards/space-station-14) and [space-wizards/RobustToolbox](https://github.com/space-wizards/RobustToolbox), by Space Wizards Federation and the other authors named in the upstream history. Code license: [LICENSE.TXT](LICENSE.TXT) (MIT).
+- Most upstream assets are [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/) unless a file says otherwise. Some are [CC BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) and are not cleared for commercial use. Example metadata: [crowbar `meta.json`](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
+- Upstream attribution notes: [Robust Generic Attribution](https://docs.spacestation14.com/en/specifications/robust-generic-attribution.html), [Robust Station Image](https://docs.spacestation14.com/en/specifications/robust-station-image.html). Build guide: [Setting up a development environment](https://docs.spacestation14.com/en/general-development/setup.html).
+- Upstream does not accept AI-generated contributions. Do not open a pull request or issue on `space-wizards/space-station-14` from this fork.
+- *The New Order: Last Days of Europe* is by the TNO development team. SSTNO is not affiliated with or endorsed by them, by Paradox Interactive, or by Hearts of Iron IV.
+
+**Made by MickTheDick. Proudly made by AI.**
