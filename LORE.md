@@ -73,4 +73,4 @@ The draft suggests these local jobs: starosta, feldsher, mechanic, farmer, grana
 | SSTNO invention | This borderland, its town, works, roads, strongholds, and mottos | No |
 | Implemented baseline | Grass pad, human Civilian, station content hidden from the normal round | Yes |
 
-SSTNO is a fan project. It is not affiliated with or endorsed by the TNO development team, Paradox Interactive, or Hearts of Iron IV. TNO art is not copied into this repository. See the README for why.
+SSTNO is a fan project. It is not affiliated with or endorsed by the TNO development team, Paradox Interactive, or Hearts of Iron IV. TNO artwork is not included; reuse permission has not been established.
